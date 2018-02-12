@@ -103,7 +103,7 @@ if __name__ == '__main__':
     input_q = Queue(maxsize=args.queue_size)
     output_q = Queue(maxsize=args.queue_size)
     pool = Pool(args.num_workers, worker, (input_q, output_q))
-    video_path = '2.mp4'
+    video_path = 'videoplayback.mp4'
     vidcap = cv2.VideoCapture(video_path)
     # video_capture = WebcamVideoStream(src=args.video_source,
     #                                   width=args.width,

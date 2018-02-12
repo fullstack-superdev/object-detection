@@ -161,7 +161,7 @@ def draw_bounding_box_on_image(image,
         fill=color)
     draw.text(
         (left + margin, text_bottom - text_height - margin),
-        "detection",
+        display_str,
         fill='black',
         font=font)
     text_bottom -= text_height - 2 * margin
@@ -385,7 +385,7 @@ def visualize_boxes_and_labels_on_image_array(image,
         else:
           box_to_color_map[box] = STANDARD_COLORS[
               classes[i] % len(STANDARD_COLORS)]
-        box_to_color_map[box]='White'
+        # box_to_color_map[box]='White'
 
   # Draw all boxes onto image.
   for box, color in six.iteritems(box_to_color_map):
